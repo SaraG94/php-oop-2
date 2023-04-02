@@ -6,9 +6,9 @@ class Food extends Product{
     public $ingredients;
     public $expiryDate;
 
-    function __construct($_ingredients,$_expiryDate) {
+    function __construct($_ingredients, $_expiryDate) {
         /*richiamo il costruttore padre*/
-        parent::__construct($_title, $_price, $_category, "Food");
+        parent:: __construct($_title, $_price, $_category, "Food");
         /*assegno i nuovi valori*/
         $this->ingredients = $_ingredients;
         $this->expiryDate = $_expiryDate;

@@ -3,8 +3,8 @@
 require_once __DIR__ . "/Product.php";
 
 class Food extends Product{
-    public $ingredients;
-    public $expiryDate;
+    public string $ingredients;
+    public string $expiryDate;
 
     function __construct($_title, $_price, $_category, $_ingredients, $_expiryDate) {
         /*richiamo il costruttore padre*/

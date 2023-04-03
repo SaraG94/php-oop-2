@@ -3,8 +3,8 @@
 require_once __DIR__ . "/Product.php";
 
 class Games extends Product{
-    public $material;
-    public $suggestSize;
+    public string $material;
+    public string $suggestSize;
 
     function __construct($_title, $_price, $_category, $_material,$_suggestSize) {
         /*richiamo il costruttore padre*/

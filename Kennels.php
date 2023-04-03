@@ -3,8 +3,8 @@
 require_once __DIR__ . "/Product.php";
 
 class Kennels extends Product{
-    public $fabric;
-    public $size;
+    public string $fabric;
+    public string $size;
 
     function __construct($_title, $_price, $_category, $_fabric, $_size) {
         /*richiamo il costruttore padre*/

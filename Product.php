@@ -3,7 +3,7 @@
 require_once __DIR__ ."/traits/Consignment.php";
 
 class Product{
-    use Consignment;
+    use Consignment; 
     public string $title;
     public string $price;
     /*categorie */
@@ -22,8 +22,21 @@ class Product{
         return $this->title;
     }
 
+    public function setTitle(string $newValue){
+        $this->validTitle($newValue, 2);
+        
+        $this->title = $newValue ;
+    }
+
     public function getPrice(){
         return $this->price;
+    }
+
+    public function validTitle($titleToTest, $minLength){
+        if(strlen($titleToTest)< $minLength){
+            throw new Exception("Il testo è troppo corto");
+        }
+        return true;
     }
 }
 ?>

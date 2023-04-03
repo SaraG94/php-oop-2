@@ -16,7 +16,7 @@ $food1 = new Food("Crocchette", 35, "categoria cane", "manzo, riso, verdure", "2
 $food2 = new Food("Crocchette", 30, "categoria gatto", "pollo, verdure", "22-11-2027");
 
 $game1 = new Games("Lancia palline", 25, "categoria cane", "plastica/gomma", "media/grande");
-$game2 = new Games("Pesce", 20, "categoria gatto", "Cotone", "tutte e taglie");
+$game2 = new Games("Pesce", 20, "categoria gatto", "Cotone", "tutte le taglie");
 
 $kennel1 = new Kennels("Cuccia rettangolare", 45, "categoria cane", "Cotone/Microfibra", "lxh: 105x60cm");
 $kennel2 = new Kennels("Cuccia tonda", 20, "categoria gatto", "Cotone/Microfibra", "r: 30cm");
@@ -40,22 +40,80 @@ $kennels=[$kennel1,$kennel2];
 <body>
     <main class="container pb-5">
         <h1 class="my-5">Shops</h1>
-
+        <!--Sezione giochi-->
         <section>
             <h2>Alimenti</h2>
 
             <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!--ciclo l'array-->
                 <?php foreach ($foods as $food) :
                 ?>
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
                             <ul>
-                                <li><strong>Titolo:</strong> <?php echo $this->getTitle() ?></li>
-                                <li><strong>Prezzo:</strong> <?php echo $this->getPrice() ?></li>
-                                <li><strong>Categoria:</strong> <?php echo $this->getCategory() ?></li>
-                                <li><strong>Ingredienti:</strong> <?php echo $this->getIngredients() ?></li>
-                                <li><strong>Da consumare entro il:</strong> <?php echo $this->getExpiryDate() ?></li>
+                                <!--stampo le proprietà-->
+                                <li><strong>Titolo:</strong> <?php echo $food->getTitle() ?></li>
+                                <li><strong>Prezzo:</strong> <?php echo $food->getPrice() ?></li>
+                                <li><strong>Categoria:</strong> <?php echo $food->getCategory() ?></li>
+                                <li><strong>Ingredienti:</strong> <?php echo $food->getIngredients() ?></li>
+                                <li><strong>Da consumare entro il:</strong> <?php echo $food->getExpiryDate() ?></li>
+                            </ul>
+                        </div>
+                    </div>
+               </div>
+                <?php
+                    endforeach
+                ?>
+            </div>
+        </section>
+        
+        <!--Sezione giochi-->
+        <section class="games">
+            <h2>Giochi</h2>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!--ciclo l'array-->
+                <?php foreach ($games as $game) :
+                ?>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <ul>
+                                <!--stampo le proprietà-->
+                                <li><strong>Titolo:</strong> <?php echo $game->getTitle() ?></li>
+                                <li><strong>Prezzo:</strong> <?php echo $game->getPrice() ?></li>
+                                <li><strong>Categoria:</strong> <?php echo $game->getCategory() ?></li>
+                                <li><strong>Materiali:</strong> <?php echo $game->getMaterial() ?></li>
+                                <li><strong>Consigliati per taglie:</strong> <?php echo $game->getSuggestSize() ?></li>
+                            </ul>
+                        </div>
+                    </div>
+               </div>
+                <?php
+                    endforeach
+                ?>
+            </div>
+        </section>
+
+           <!--Sezione cuccie-->
+           <section class="kennels">
+            <h2>Cuccie</h2>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!--ciclo l'array-->
+                <?php foreach ($kennels as $kennel) :
+                ?>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <ul>
+                                <!--stampo le proprietà-->
+                                <li><strong>Titolo:</strong> <?php echo $kennel->getTitle() ?></li>
+                                <li><strong>Prezzo:</strong> <?php echo $kennel->getPrice() ?></li>
+                                <li><strong>Categoria:</strong> <?php echo $kennel->getCategory() ?></li>
+                                <li><strong>Tessuti:</strong> <?php echo $kennel->getFabric() ?></li>
+                                <li><strong>Misure:</strong> <?php echo $kennel->getSize() ?></li>
                             </ul>
                         </div>
                     </div>

@@ -23,13 +23,17 @@ class Product{
     }
 
     public function setTitle(string $newValue){
-        $this->validTitle($newValue, 2);
+        $this->validTitle($newValue, 3);
         
         $this->title = $newValue ;
     }
 
     public function getPrice(){
         return $this->price;
+    }
+
+    public function getCategory(){
+        return $this->category;
     }
 
     public function validTitle($titleToTest, $minLength){

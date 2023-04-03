@@ -14,5 +14,5 @@ $game2 = new Games("Pesce", 20, "categoria gatto", "Cotone", "tutte e taglie");
 
 $Kennel1 = new Kennels("Cuccia rettangolare", 45, "categoria cane", "Cotone/Microfibra", "lxh: 105x60cm");
 $Kennel2 = new Kennels("Cuccia tonda", 20, "categoria gatto", "Cotone/Microfibra", "r: 30cm");
-var_dump($cibo1, $cibo2, $game1, $game2, $Kennel1, $Kennel2 );
+var_dump($prodotto1, $cibo1, $cibo2, $game1, $game2, $Kennel1, $Kennel2 );
 ?>

@@ -1,6 +1,9 @@
 <?php
 
+require_once __DIR__ ."/traits/Consignment.php";
+
 class Product{
+    use Consignment;
     public $title;
     public $price;
     /*categorie */

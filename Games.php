@@ -13,5 +13,13 @@ class Games extends Product{
         $this->material = $_material;
         $this->suggestSize = $_suggestSize;
     }
+
+    public function getMaterial(){
+        return $this->material;
+    }
+
+    public function getSuggestSize(){
+        return $this->suggestSize;
+    }
 }
 ?>

@@ -13,5 +13,13 @@ class Kennels extends Product{
         $this->fabric = $_fabric;
         $this->size = $_size;
     }
+
+    public function getFabric(){
+        return $this->fabric;
+    }
+
+    public function getSize(){
+        return $this->size;
+    }
 }
 ?>

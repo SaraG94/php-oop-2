@@ -13,5 +13,14 @@ class Food extends Product{
         $this->ingredients = $_ingredients;
         $this->expiryDate = $_expiryDate;
     }
+
+    public function getIngredients(){
+        return $this->ingredients;
+    }
+
+    public function getExpiryDate(){
+        return $this->expiryDate;
+    }
+    
 }
 ?>

@@ -4,8 +4,8 @@ require_once __DIR__ ."/traits/Consignment.php";
 
 class Product{
     use Consignment;
-    public $title;
-    public $price;
+    public string $title;
+    public string $price;
     /*categorie */
     public $category;
     /*tipi di prodotto*/
@@ -16,6 +16,14 @@ class Product{
         $this->price = $_price;
         $this->category = $_category;
         $this->typeProduct = $_typeProduct;
+    }
+
+    public function getTitle(){
+        return $this->title;
+    }
+
+    public function getPrice(){
+        return $this->price;
     }
 }
 ?>

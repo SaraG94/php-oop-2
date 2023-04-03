@@ -6,7 +6,7 @@ class Kennels extends Product{
     public $fabric;
     public $size;
 
-    function __construct($_fabric,$_size) {
+    function __construct($_title, $_price, $_category, $_fabric, $_size) {
         /*richiamo il costruttore padre*/
         parent::__construct($_title, $_price, $_category, "Kennel");
         /*assegno i nuovi valori*/

@@ -6,7 +6,7 @@ class Games extends Product{
     public $material;
     public $suggestSize;
 
-    function __construct($_material,$_suggestSize) {
+    function __construct($_title, $_price, $_category, $_material,$_suggestSize) {
         /*richiamo il costruttore padre*/
         parent::__construct($_title, $_price, $_category, "Game");
         /*assegno i nuovi valori*/
